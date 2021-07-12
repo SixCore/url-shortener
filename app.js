@@ -19,10 +19,9 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
-/*
-    TODO:
-    Generate ID recursive -> generate ids until not in database
-*/
+/**
+ * 
+ */
 app.post("/generate", async (req, res) => {
     const url = req.body.url;
 
@@ -70,6 +69,9 @@ app.post("/generate", async (req, res) => {
     }
 });
 
+/**
+ * 
+ */
 app.get("/url/:id", async (req, res) => {
     let con;
     try {
